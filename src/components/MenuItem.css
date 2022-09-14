@@ -1,0 +1,159 @@
+.menu-list {
+  margin-left: 3rem;
+  margin-top: 3rem;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.list-view {
+  width: 350px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background-size: cover;
+  font-family: 'Times New Roman', Times, serif;
+  background: linear-gradient(rgb(155, 155, 209),violet);
+  box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 8%);
+  overflow: hidden;
+
+}
+
+.list-img {
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.list-img:hover {
+  transform: scale(1.1);
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  color: orange;
+}
+
+.title{
+  font-weight: bold;
+  display: contents;
+  margin:20px;
+  border-radius: 20%;
+  background-color: orangered;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color:black;
+}
+
+.Desc-style {
+  font-size: 13px;
+  text-align: start;
+  padding: 10px;
+  color: #fff;
+}
+
+.rate{
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.delete-align{
+  position:absolute;
+  align-items: flex-end;
+  background:olive;
+  border-radius: 50%;
+  padding: 1rem;
+  color:black;
+}
+
+/* Header */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+  box-sizing: border-box;
+ }
+ 
+ a {
+  text-decoration: none;
+ }
+ li {
+  list-style: none;
+ }
+
+ /* NAVBAR STYLING */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  /* background-color: green; */
+  /* color: #fff; */
+  color:orange;
+  font-weight: bolder;
+ }
+ .nav-links a {
+  color:orange;
+  font-weight: bolder;
+ }
+ .Logo {
+  font-size: 32px;
+  
+ }
+ .logo-img{
+  width: 15rem;
+  border-radius: 50%;
+  height: auto;
+  /* opacity: 0.3; */
+ }
+
+ .logo-img:hover{
+  transform: scale(1.1);
+ }
+ /* NAVBAR MENU */
+ .menu {
+  display: flex;
+  gap: 1em;
+  font-size: 25px;
+ }
+ .menu li {
+  padding: 5px 14px;
+ }
+
+.btn{
+  background-color: orangered;
+  border:0;
+  color:white;
+  width:auto;
+  padding:4px;
+  cursor: pointer;
+  margin:10px;
+  box-shadow: lightgrey;
+  font-family: Arial;
+  float: right;
+}
+
+.padding{
+  padding: 10px;
+}
+
+.align {
+  align-content: right;
+}
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
