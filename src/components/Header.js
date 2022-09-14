@@ -1,43 +1,70 @@
 import React, { useState } from "react";
-// import "./Header.css";
 import "./MenuItem.css"
 import { FiEdit } from "react-icons/fi";
 
 import { CgSearchLoading } from "react-icons/cg";
-import AddMenuItem from "./AddMenuItem";
+import AddMenu from "./AddMenuItem";
 import { FaPlusSquare } from "react-icons/fa";
 
-const Header = ({ }) => {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <>
+class Header extends React.Component {
+  state = {
+    isOpen: false
+  }
+  render() {
+    return (
       <div>
-        {/* <div>
-          <span className="logo">Resturent</span>
-        </div> */}
-        {/* <body> */}
+        <div>
+          <nav className="header">
+            <img src="https://i.ytimg.com/vi/AUml2IgSFCQ/maxresdefault.jpg" alt="" className="logo-img" />
+            <div className="Logo">PureFit</div>
+            <ul className="nav-links">
+              <div className="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Contact</a></li>
+              </div>
+            </ul>
+          </nav>
+          <div className="btn padding"
+            onClick={(e) => this.setState({ isOpen: true })}
+          >
+            <FaPlusSquare style={{ fontSize: "14px" }} />
+            ADD New  Menu
+            <AddMenu isOpen={this.state.isOpen} onClose={(e) => this.setState({ isOpen: false })}>
 
-        <nav className="header">
-          <img src="https://i.ytimg.com/vi/AUml2IgSFCQ/maxresdefault.jpg" alt="" className="logo-img" />
-          <div className="Logo">PureFit</div>
-          <ul className="nav-links">
-            <div className="menu">
-              <li><a href="/">Home</a></li>
-              <li><a href="/">About</a></li>
-              <li><a href="/">Contact</a></li>
-            </div>
-          </ul>
-        </nav>
-        <div className="btn padding" onClick={() => {
-          setOpen(true);
-        }}><FaPlusSquare style={{ fontSize: "14px" }} />
-          ADD New  Menu
-          {open ? <AddMenuItem AddNewitem={open} /> : ""}
+              <div style={{ color: 'black' }} className="container">
+                <form className="register-form">
+                  <h3>Update Menu</h3>
+                  <input
+                    name="id"
+                    placeholder="id"
+                    class='form-field'
+                  />
+                  <input
+                    name="Category"
+                    placeholder="Category"
+                    class='form-field'
+                  />
+                  <input
+                    name="Description"
+                    placeholder="Description"
+                    class='form-field'
+                  />
+                  <input
+                    name="Price"
+                    placeholder="Price"
+                    class='form-field'
+                  />
+                  <button className="btn form-field">Update Menu</button>
+                  </form></div>
+                </AddMenu>
+              </div>
+          </div>
         </div>
-      </div>
-    </>
-  );
-};
 
-export default Header;
+        );
+  }
+}
+
+        // export default App;
+        export default Header;

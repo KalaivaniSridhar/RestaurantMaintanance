@@ -9,5 +9,27 @@
   background-attachment: fixed;
 
 }
-
+.register-form{
+  /* display:grid */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  
+  /* justify-content:space-evenly */
+}
 /* Menulist */
+.container{
+  width:300px;
+  background-color:lightgray;
+  margin: auto;
+    box-shadow:0 0 20px 0 rgba(0,0,0,0.2);
+    padding: 30px;
+  }
+  .form-field{
+  padding: 10px;
+  border: 0;
+  font-size: 14px;
+  font-family:Arial, Helvetica, sans-serif;
+  margin: 0 0 10px 0;
+  
+  }
